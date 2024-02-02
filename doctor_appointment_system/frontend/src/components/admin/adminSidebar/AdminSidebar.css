@@ -1,0 +1,22 @@
+.adminsidebar {
+    width: 25%;
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    padding: 20px 0;
+}
+
+.adminicon {
+    margin-bottom: 20px;
+}
+.adminicon a {
+    text-decoration: none;
+    color: #e32626;
+    font-size: 20px;
+}
+
+.adminicon a:hover {
+    color: #00bcd4;
+}

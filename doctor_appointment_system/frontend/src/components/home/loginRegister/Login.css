@@ -1,0 +1,81 @@
+.login {
+    display: flex;
+}
+.loginleft {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+.loginright {
+    float: right;
+    width: 50%;
+    height: 100%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-family: sans-serif; 
+    line-height: 1.5; 
+    min-height: 100vh; 
+    background: whitesmoke; 
+    flex-direction: column; 
+    margin: 0;
+}
+.loginright a {
+	text-decoration: none;
+}
+.loginleftimage {
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 500px;
+    height: 300px;
+}
+
+.main { 
+	background-color: #fff; 
+	border-radius: 15px; 
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
+	padding: 10px 20px; 
+	transition: transform 0.2s; 
+	width: 500px; 
+	text-align: center; 
+} 
+
+.loginlabel { 
+	display: block; 
+	width: 100%; 
+	margin-top: 10px; 
+	margin-bottom: 5px; 
+	text-align: left; 
+	color: #555; 
+	font-weight: bold; 
+} 
+
+
+.logininput { 
+	display: block; 
+	width: 100%; 
+	margin-bottom: 15px; 
+	padding: 10px; 
+	box-sizing: border-box; 
+	border: 1px solid #ddd; 
+	border-radius: 5px; 
+} 
+
+.loginbutton { 
+	padding: 15px; 
+	border-radius: 10px; 
+	margin-top: 15px; 
+	margin-bottom: 15px; 
+	border: none; 
+	color: white; 
+	cursor: pointer; 
+	background-color: blue; 
+	width: 100%; 
+	font-size: 16px; 
+} 
+
+.wrap { 
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+}

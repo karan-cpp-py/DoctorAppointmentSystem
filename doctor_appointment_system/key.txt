@@ -1,0 +1,1 @@
+approval {normal user: 0, approved doctor: 1}
