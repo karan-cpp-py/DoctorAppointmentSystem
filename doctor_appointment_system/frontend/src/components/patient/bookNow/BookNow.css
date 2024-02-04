@@ -5,7 +5,14 @@
   .doctor-availability-item h4{
     color:darkslategray;
   }
-  
+  .bookbuttondashboardt{
+    color: white;
+    height: 40px;
+    width: 130px;
+    border: none;
+    border-radius: 80px;
+    background-color: rgb(67, 67, 194);
+  }
   .booknowbutton {
     background-color: #4caf50; 
     border: none; 

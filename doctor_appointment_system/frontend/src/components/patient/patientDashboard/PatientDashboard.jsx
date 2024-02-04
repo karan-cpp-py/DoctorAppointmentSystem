@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './PatientDashboard.css';
 import axios from 'axios';
-import BookNow from '../bookNow/BookNow';
+import SelectDate from '../selectDate/SelectDate';
 
 const PatientDashboard = () => {
   const [doctorDetails, setDoctorDetails] = useState([]);
@@ -44,9 +44,8 @@ const PatientDashboard = () => {
                 <button className='bookbuttondashboard' onClick={() => toggleAvailability(index)}>Book Now</button>
               </div>
             </div>
-            <div className='timingcss'>
-              {selectedBookNow.includes(index) && (<BookNow id={item._id} />)}
-            </div>
+            {/* {selectedBookNow.includes(index) && (<BookNow id={item._id} email={item.email} />)} */}
+            {selectedBookNow.includes(index) && (<SelectDate id={item._id} email={item.email} />)}
           </div>
         ))
       }

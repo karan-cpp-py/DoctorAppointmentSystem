@@ -3,6 +3,7 @@ const router = express.Router();
 const UserModel = require('../models/users');
 const NewsTable = require('../models/latestnews');
 const DoctorAvailability = require('../models/doctoravailability');
+const Bookings = require('../models/bookings');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const jwtSecretKey = "qwertyuiopasdfghjklzxcvbnmqwerty";
@@ -158,7 +159,30 @@ router.get('/getdoctoravailability/:id', async(req,res)=> {
     } catch (error) {
         res.status(400).json(error);
     }
+});
+
+//get already booked slots
+router.get('/getalreadybookedslots/:id', async(req,res)=> {
+    const {id} = req.params;
+    try {
+        const data = await Bookings.find({doctor_id:id});
+        //console.log(data);
+        res.status(200).json({data:data});
+    } catch (error) {
+        res.status(400).json(error);
+    }
 })
+
+//submit bookings
+router.post('/submitbookings', async(req,res)=> {
+    try {
+        const data = new Bookings(req.body);
+        const savedData = await data.save();
+        res.status(200).json(savedData);
+    } catch (error) {
+        res.status(400).json(error);
+    }
+});
 
 //latest news entry
 router.post('/newsentry', async (req, res) => {
